@@ -5,7 +5,9 @@ const app = express()
 const {mongoose} = require('mongoose')
 
 //database connection 
-mongoose.connect()
+mongoose.connect(process.env.MONGO_URL)
+.then(() => console.log("database connected"))
+.catch ((error) => console.log("error", error))
 
 app.use('/' , require('./routes/authroutes'))
 
