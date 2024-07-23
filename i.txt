@@ -4,3 +4,10 @@ axios helps us to connect the backend with the frontend
 
 
 when using react router dom we pack the entire app in router that will allow us to us router iside ou rapplicaion
+
+
+IN the backend folder we downloaded the node packages 
+express 
+nodemon 
+dotenv 
+cors
