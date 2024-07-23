@@ -1,0 +1,6 @@
+IN the frontend fplder we downloaded to node packages 
+react router dom that helps us connect the pages 
+axios helps us to connect the backend with the frontend
+
+
+when using react router dom we pack the entire app in router that will allow us to us router iside ou rapplicaion
