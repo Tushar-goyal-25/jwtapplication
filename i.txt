@@ -11,3 +11,6 @@ express
 nodemon 
 dotenv 
 cors
+
+
+we added a start command i the package.json t start the nodemon server 
