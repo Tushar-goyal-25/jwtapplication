@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router()
 const cors = require('cors')
-const {test} = require('../controlers/authcontroler')
+const {test, registerUser} = require('../controlers/authcontroler')
 
 //middleware
 
@@ -13,7 +13,9 @@ router.use(
 
 }))
 
+//routes to connect the endpoints 
 
 router.get('/', test)
+router.post('/register', registerUser)
 
 module.exports = router
