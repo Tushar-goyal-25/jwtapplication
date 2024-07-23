@@ -14,3 +14,7 @@ cors
 
 
 we added a start command i the package.json t start the nodemon server 
+
+
+id = root123
+password = admin123@
