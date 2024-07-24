@@ -58,7 +58,7 @@ JWT_SECRET=your_jwt_secret_key
 #### Start the Backend Server
 
 ```bash
-node server.js
+npm start
 ```
 
 The backend server will start on `http://localhost:8000`.
@@ -75,7 +75,7 @@ npm install
 #### Start the Frontend Server
 
 ```bash
-npm start
+npm run dev
 ```
 
 The frontend server will start on `http://localhost:3000`.
