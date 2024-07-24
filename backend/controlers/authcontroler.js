@@ -51,7 +51,38 @@ const registerUser = async (req,res) => {
 }
 
 
+//login endpoint
+const loginUser = async (req, res) => {
+    try {
+        const {email,password} = req.body;
+        const user = await User.findOne({email});
+        //check user exists
+        if(!user){
+            return res.json({
+                error:'User not found'
+            })
+
+        }
+        const match = await comparePasswords(password, user.password);
+        if(match){
+            //jsonwebtoken
+            res.json('passwrods match')
+        }
+        if(!match){
+            res.json({error: 'incorrect password'})
+        }
+
+
+
+    } catch (error) {
+        console.log(error)
+        
+    }
+
+}
+
 module.exports = {
     test,
-    registerUser
+    registerUser,
+    loginUser,
 }

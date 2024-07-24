@@ -1,11 +1,10 @@
 const express = require('express');
 const router = express.Router()
 const cors = require('cors')
-const {test, registerUser} = require('../controlers/authcontroler')
+const {test, registerUser, loginUser} = require('../controlers/authcontroler')
 
 //middleware
 
-//connecting backedn with frontend
 router.use(
     cors({
         credentials:true ,
@@ -14,8 +13,10 @@ router.use(
 }))
 
 //routes to connect the endpoints 
+//create the functions in the controller
 
 router.get('/', test)
 router.post('/register', registerUser)
+router.post('/login', loginUser)
 
 module.exports = router
