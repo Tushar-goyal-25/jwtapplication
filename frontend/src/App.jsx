@@ -6,6 +6,7 @@ import Register from './pages/Register'
 import Login from './pages/Login'
 import axios from 'axios'
 import { Toaster, resolveValue } from 'react-hot-toast';
+import { UserContextProvider } from '../context/usercontext'
 
 axios.defaults.baseURL= 'http://localhost:8000'
 axios.defaults.withCredentials = true
@@ -13,7 +14,7 @@ axios.defaults.withCredentials = true
 function App() {
 
   return (
-    <>
+    <UserContextProvider>
     <Navbar />
     {/* error bubble */}
     <Toaster postion='top-center' toastOptions={{duration: 2000}} />  
@@ -26,7 +27,7 @@ function App() {
     
 
       
-    </>
+      </UserContextProvider>
   )
 }
 

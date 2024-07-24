@@ -84,8 +84,24 @@ const loginUser = async (req, res) => {
 
 }
 
+//getprofile endpoint
+
+const getProfile = (req,res) => {
+    const {token} = req.cookies //get the cookies from the header
+    if(token){
+        jwt.verify(token, process.env.JWT_SECRET, {}, (err,user) => {  //verify the jsonwebtoken
+            if(err) throw err;
+            res.json(user);
+        })
+    }
+    else{
+        res.json(null)
+    }
+}
+
 module.exports = {
     test,
     registerUser,
     loginUser,
+    getProfile,
 }
